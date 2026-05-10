@@ -1,6 +1,6 @@
-const User = require('./user.model');
-const Post = require('./post.model');
-const Comment = require('./comment.model');
+const User = require('./user.module');
+const Post = require('./post.module');
+const Comment = require('./comment.module');
 
 User.hasMany(Post, { foreignKey: 'userId', onDelete: 'CASCADE' });
 Post.belongsTo(User, { foreignKey: 'userId' });
